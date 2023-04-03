@@ -1,4 +1,4 @@
-# FCB Studios Front-End
+# Eleventy Starter
 
 This is a statically built front-end, based on [eleventy-webpack](https://github.com/clenemt/eleventy-webpack). As you'd expect, it uses [eleventy](https://www.11ty.dev/) and [webpack](https://webpack.js.org/).
 
