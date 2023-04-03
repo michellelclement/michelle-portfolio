@@ -1,0 +1,8 @@
+{
+	"url": "https://example.com",
+  "lang": "en-gb",
+  "type": "website",
+  "title": "Eleventy Starter",
+  "description": "An example description",
+  "image": "link_to_image"
+}

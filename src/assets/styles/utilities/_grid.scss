@@ -1,0 +1,16 @@
+@mixin grid($number: 12) {
+  display: grid;
+  grid-template-columns: repeat($number, 1fr);
+}
+
+@mixin rowGap($val: $gutter) {
+  grid-row-gap: $val;
+}
+
+@mixin colGap($val: $gutter) {
+  grid-column-gap: $val;
+}
+
+@mixin col($end: 12, $start: auto) {
+  grid-column: $start / span $end;
+}

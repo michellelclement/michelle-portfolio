@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ site.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if title %}{{ title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ description or site.description }}">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    {# Open graph related #}
+    <meta property="og:title" content="{{ title or site.title }}" />
+    <meta property="og:type" content="{{ site.type }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:image" content="{{ image or site.image }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:description" content="{{ description or site.description }}" />
+
+    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+
+    <link rel="stylesheet" href="{% webpack 'main.css' %}">
+  </head>
+  <body>
+
+    {% include "partials/header.njk" %}
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    {% include "partials/footer.njk" %}
+
+    <script async defer src="{% webpack 'main.js' %}"></script>
+  </body>
+</html>

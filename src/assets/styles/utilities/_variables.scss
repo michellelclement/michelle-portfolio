@@ -1,0 +1,19 @@
+// Typography
+$font-heading: sans-serif;
+$font-body: serif;
+
+// Colors
+$black: #000000;
+$white: #FFFFFF;
+
+// Spacing
+$gutter-small: rem(10);
+$gutter: rem(20);
+$gutter-large: rem(40);
+
+// Sizes
+$max-width: rem(1400);
+
+// Borders
+$border-width: 1px;
+$border-primary: $border-width solid $black;

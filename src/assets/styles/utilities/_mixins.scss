@@ -1,0 +1,52 @@
+@mixin wrapper($verticalPadding: $gutter) {
+  position: relative;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $gutter;
+
+  @include media($s-screen-up) {
+    padding: $gutter-large;
+  }
+
+  @include media($l-screen-up) {
+    padding-top: $verticalPadding;
+    padding-bottom: $verticalPadding;
+  }
+}
+
+@mixin listReset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin btnReset {
+  background: none;
+  padding: 0;
+  font-family: inherit;
+  border: none;
+  color: inherit;
+  display: inline-flex;
+}
+
+@mixin svgPad($width, $height) {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 0;
+    padding-bottom: percentage($height/$width);
+  }
+
+  svg {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+  }
+}
