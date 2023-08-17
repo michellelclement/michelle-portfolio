@@ -31,6 +31,7 @@ module.exports = (config) => {
   config.addPassthroughCopy('src/favicon.ico');
   config.addPassthroughCopy('src/assets/static');
   config.addPassthroughCopy('src/assets/fonts');
+  config.addPassthroughCopy('src/assets/images');
 
   // Dev Server options
   config.setServerOptions({
