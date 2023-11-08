@@ -1,10 +1,12 @@
 // Typography
-$font-heading: sans-serif;
-$font-body: serif;
+$ff-main: 'DM Sans', sans-serif;
 
-// Colors
-$black: #000000;
-$white: #FFFFFF;
+//Colors
+$primary: #F08C69;
+$gradient-1: #404DA3;
+$gradient-2: #5167F0;
+$dark: #000000;
+$light: white;
 
 // Spacing
 $gutter-small: rem(10);
@@ -15,5 +17,6 @@ $gutter-large: rem(40);
 $max-width: rem(1400);
 
 // Borders
-$border-width: 1px;
-$border-primary: $border-width solid $black;
+$border-width: 4px;
+$border-primary: $border-width solid $dark;
+$border-radius: 30px;

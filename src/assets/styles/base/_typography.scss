@@ -1,7 +1,18 @@
 p {
-  font-family: $font-body;
   margin: 0;
   line-height: 1.2;
+  font-size: rem(21);
+  line-height: 110%;
+  @include media($m-screen-up) {
+    font-size: rem(36);
+  }
+}
+
+.p-small {
+  font-size: rem(16);
+  @include media($m-screen-up) {
+    font-size: rem(21);
+  }
 }
 
 strong {
@@ -9,24 +20,23 @@ strong {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-heading;
   margin: 0;
   line-height: 1;
 }
 
 h1 {
-  font-size: rem(36);
-
+  font-size: rem(62);
+  line-height: 110%;
   @include media($m-screen-up) {
-    font-size: rem(72);
+    font-size: rem(180);
   }
 }
 
 h2 {
-  font-size: rem(32);
-
+  font-size: rem(30);
+  line-height: 120%;
   @include media($m-screen-up) {
-    font-size: rem(64);
+    font-size: rem(60);
   }
 }
 
