@@ -20,13 +20,20 @@
   list-style: none;
 }
 
-@mixin btnReset {
-  background: none;
+@mixin buttonReset {
+  background: $dark;
   padding: 0;
   font-family: inherit;
   border: none;
-  color: inherit;
+  color: $light;
   display: inline-flex;
+  border-radius: $border-radius;
+  text-decoration: none;
+  padding: rem(16) rem(32);
+  font-size: rem(20);
+  @include media($m-screen-up) {
+    font-size: rem(27);
+  }
 }
 
 @mixin svgPad($width, $height) {

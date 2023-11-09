@@ -3,23 +3,57 @@
 }
 
 .hero-about__container {
-  @include grid;
-  @include colGap($gutter);
+  padding-top: $gutter-large;
   padding-bottom: $gutter-xlarge;
+  @include media($m-screen-up) {
+    @include grid;
+    @include colGap($gutter);
+    padding-top: 0;
+  }
 }
 
 .hero-about__header {
-  grid-column: 1 / span 5;
   @include media($m-screen-up) {
+    grid-column: 1 / span 6;
+  }
+  @include media($l-screen-up) {
     grid-column: 2 / span 3;
   }
 }
 
 .hero-about__image {
-  grid-column: 5 / span 4;
+  display: flex;
+  justify-content: center;
+  padding-top: $gutter-large;
+  padding-bottom: $gutter-large;
+  @include media($m-screen-up) {
+    display: block;
+    grid-column: 1 / span 5;
+    padding-bottom: 0;
+  }
+  @include media($l-screen-up) {
+    grid-column: 5 / span 4;
+  }
 }
 
 .hero-about__sub-heading {
-  align-self: end;
-  grid-column: 9 / span 3;
+  @include media($m-screen-up) {
+    align-self: end;
+    grid-column: 7 / span 5;
+  }
+  @include media($l-screen-up) {
+    align-self: end;
+    grid-column: 9 / span 3;
+  }
+}
+
+.hero-about__button {
+  margin-top: $gutter;
+  @include media($m-screen-up) {
+    margin-top: $gutter-small;
+  }
+}
+
+.hero-about__scroll {
+  padding-bottom: $gutter;
 }

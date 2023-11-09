@@ -1,11 +1,33 @@
 .image-oval {
-  height: 255px;
-  width: 180px;
+  min-height: 255px;
+  min-width: 180px;
+  aspect-ratio: 3/4;
   border-radius: 1000px;
   position: relative;
   @include media($m-screen-up) {
-    height: 500px;
-    width: 350px;
+    // height: 500px;
+    // width: 350px;
+  }
+}
+
+.image-oval__image {
+  height: 100%;
+}
+
+.image-oval__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.image-oval__second {
+  top: 4px;
+  left: 4px;
+  z-index: 2;
+  background-color: $primary;
+  @include media($m-screen-up) {
+    top: 13px;
+    left: 13px;
   }
 }
 
@@ -25,27 +47,6 @@
   z-index: 3;
   background-color: transparent;
   border: 4px solid $dark;
-}
-
-.image-over__image {
-  height: 100%;
-}
-
-.image-over__image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.image-oval__second {
-  top: 4px;
-  left: 4px;
-  z-index: 2;
-  background-color: $primary;
-  @include media($m-screen-up) {
-    top: 13px;
-    left: 13px;
-  }
 }
 
 .image-oval__third {
