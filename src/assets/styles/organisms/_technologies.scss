@@ -1,3 +1,26 @@
 .technologies {
   @include wrapper;
 }
+
+.technologies__container {
+  @include grid;
+  @include rowGap($gutter);
+  @include media($m-screen-up) {
+    @include rowGap($gutter-xlarge);
+  }
+}
+
+.technologies__heading {
+  grid-column: 1 / span 11;
+  @include media($m-screen-up) {
+    grid-column: 2 / span 11;
+  }
+  
+}
+
+.technologies__copy {
+  grid-column: 1 / span 11;
+  @include media($m-screen-up) {
+    grid-column: 2 / span 11;
+  }
+}

@@ -3,6 +3,7 @@
   max-width: $max-width;
   margin: 0 auto;
   padding: $gutter;
+  border: 2px solid red;
 
   @include media($s-screen-up) {
     padding: $gutter-large;

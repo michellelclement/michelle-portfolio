@@ -1,26 +1,26 @@
-.text-section {
+.cv {
   @include wrapper;
 }
 
-.text-section__container {
+.cv__container {
   @include grid;
   @include rowGap($gutter-large);
-  padding: $gutter-xxlarge 0;
-  @include media($m-screen-up) {
-    @include rowGap($gutter-xlarge);
-  }
 }
 
-.text-section__intro {
-  grid-column: 1 / span 12;
-  @include media($m-screen-up) {
-    grid-column: 4 / span 8;
-  }
-}
-
-.text-section__copy {
+.cv__header {
   grid-column: 1 / span 12;
   @include media($m-screen-up) {
     grid-column: 6 / span 6;
   }
+}
+
+.cv__items {
+  grid-column: 1 / span 12;
+  @include media($m-screen-up) {
+    grid-column: 6 / span 6;
+  }
+}
+
+.cv__dates {
+  padding: $gutter 0 $gutter-large 0;
 }

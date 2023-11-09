@@ -19,7 +19,7 @@
   grid-row: 2;
   grid-column: 4 / span 5;
   @include media($s-screen-up) {
-    grid-column: 5 / span 5;
+    grid-column: 4 / span 5;
   }
 }
 
@@ -28,6 +28,6 @@
   grid-column: 1 / span 12;
   padding-top: $gutter-large;
   @include media($m-screen-up) {
-    grid-column: 8 / span 5;
+    grid-column: 7 / span 5;
   }
 }
