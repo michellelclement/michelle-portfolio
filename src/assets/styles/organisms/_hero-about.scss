@@ -1,3 +1,24 @@
 .hero-about {
   @include wrapper;
 }
+
+.hero-about__container {
+  @include grid;
+  @include colGap($gutter);
+}
+
+.hero-about__header {
+  grid-column: 1 / span 5;
+  @include media($m-screen-up) {
+    grid-column: 2 / span 3;
+  }
+}
+
+.hero-about__image {
+  grid-column: 5 / span 4;
+}
+
+.hero-about__sub-heading {
+  align-self: end;
+  grid-column: 9 / span 3;
+}

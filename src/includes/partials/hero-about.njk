@@ -1,9 +1,13 @@
-<section class="hero">
-  <h1>{{ heading }}</h1>
-  <div class="hero-about__image">
-    {% include "partials/image-oval-about.njk" %}
-  </div>
-  <p>{{ subHeading }}</p>
-  <a href="">{{ buttonText }}</a>
-  <p>Scroll for details</p>
+<section class="hero-about">
+  <div class="hero-about__container">
+    <h1 class="hero-about__header">{{ heading }}</h1>
+    <div class="hero-about__image">
+      {% include "partials/image-oval-about.njk" %}
+    </div>
+    <div class="hero-about__sub-heading">
+      <p>{{ subHeading }}</p>
+      <a href="">{{ buttonText }}</a>
+    </div>
+  </div>    
+    {# <p>Scroll for details</p> #}
 </section>
