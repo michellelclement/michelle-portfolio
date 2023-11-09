@@ -5,6 +5,7 @@
 .hero-about__container {
   @include grid;
   @include colGap($gutter);
+  padding-bottom: $gutter-xlarge;
 }
 
 .hero-about__header {
