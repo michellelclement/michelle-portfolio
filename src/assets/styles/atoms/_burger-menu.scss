@@ -6,13 +6,13 @@
 .burger-menu__bar::before,
 .burger-menu__bar::after {
   display: block;
-  width: 35px;
-  height: 3px;
+  width: rem(35);
+  height: rem(3);
   background: $dark;
   position: absolute;
-  border-radius: 3px;
+  border-radius: rem(3);
   left: 50%;
-  margin-left: -18px;
+  margin-left: rem(-18);
   transition: transform 350ms ease-in-out;
 }
 
@@ -27,11 +27,11 @@
 }
 
 .burger-menu__bar::before {
-  top: -8px;
+  top: rem(-8);
 }
 
 .burger-menu__bar::after {
-  bottom: -8px;
+  bottom: rem(-8);
 }
 
 .burger-menu[enabled='true'] .burger-menu__trigger {
@@ -98,7 +98,7 @@
   }
 
   li {
-    padding: 40px 0;
+    padding: rem(40) 0;
   }
 }
 

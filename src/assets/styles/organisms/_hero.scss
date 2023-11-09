@@ -1,3 +1,33 @@
 .hero {
   @include wrapper;
+  min-height: 80vh;
+}
+.hero__container {
+  @include grid;
+  @include rowGap;
+  padding: $gutter-xlarge 0;
+}
+
+.hero__header-1 {
+  grid-column: 1 / span 5;
+  @include media($m-screen-up) {
+    grid-column: 2 / span 5;
+  }
+}
+
+.hero__header-2 {
+  grid-row: 2;
+  grid-column: 4 / span 5;
+  @include media($s-screen-up) {
+    grid-column: 5 / span 5;
+  }
+}
+
+.hero__sub-header {
+  grid-row: 3;
+  grid-column: 1 / span 12;
+  padding-top: $gutter-large;
+  @include media($m-screen-up) {
+    grid-column: 8 / span 5;
+  }
 }
