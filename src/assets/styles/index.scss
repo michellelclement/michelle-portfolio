@@ -13,8 +13,17 @@
 @import "base/typography";
 
 @import "atoms/link";
+@import "atoms/divider";
+@import "atoms/skip-link";
+@import "atoms/burger-menu";
 
 @import "molecules/card";
 
 @import "organisms/header";
 @import "organisms/footer";
+@import "organisms/hero";
+@import "organisms/hero-about";
+@import "organisms/text-section";
+@import "organisms/technologies";
+@import "organisms/cta";
+@import "organisms/nav";

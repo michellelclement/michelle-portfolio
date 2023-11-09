@@ -1,0 +1,8 @@
+.cta {
+  background-color: $dark;
+  color: $light;
+}
+
+.cta__container {
+  @include wrapper;
+}

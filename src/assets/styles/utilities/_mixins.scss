@@ -8,10 +8,10 @@
     padding: $gutter-large;
   }
 
-  @include media($l-screen-up) {
-    padding-top: $verticalPadding;
-    padding-bottom: $verticalPadding;
-  }
+  // @include media($l-screen-up) {
+  //   padding-top: $verticalPadding;
+  //   padding-bottom: $verticalPadding;
+  // }
 }
 
 @mixin listReset {

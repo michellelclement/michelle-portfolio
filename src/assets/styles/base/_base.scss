@@ -19,15 +19,21 @@ body {
   font-size: rem(18);
   min-height: 100%;
   font-family: $ff-main;
+  background-color: $primary;
 }
+
+// section,
+// div {
+//   border: 2px solid red;
+// }
 
 // header,
 // main,
 // footer {
-//   width: 100%;
-//   max-width: $max-width;
-//   padding: $gutter;
-//   margin: 0 auto;
+  // width: 100%;
+  // max-width: $max-width;
+  // padding: $gutter;
+  // margin: 0 auto;
 // }
 
 // main {
@@ -45,4 +51,10 @@ img {
 
 button {
   cursor: pointer;
+}
+
+ul,
+li,
+ol {
+  list-style-type: none;
 }

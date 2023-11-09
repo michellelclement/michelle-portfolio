@@ -1,4 +1,32 @@
 .header {
+  @include wrapper;
   color: $dark;
   border: 2px solid red;
+  width: 100%;
  }
+
+ .site-head {
+  padding: 0.6rem 0;
+  background: purple;
+  border-top: 5px solid green;
+  border-bottom: 5px solid red;
+  color: $dark;
+  line-height: 1.1;
+}
+
+.site-head :focus {
+  outline-color: blue;
+}
+
+.site-head__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.site-head__brand {
+  display: block;
+  width: 3rem;
+}
