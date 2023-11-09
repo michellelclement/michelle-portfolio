@@ -1,24 +1,13 @@
-<header class="header site-head" role="banner">
+<header class="header" role="banner">
    <a href="#main-content" class="skip-link"><p class="p-small">Skip to content</p></a>
    <div class="wrapper">
-    <div class="site-head__inner">
-      <a href="/" aria-label="ACME home" class="site-head__brand">MC.
+    <div class="header__inner">
+      <a href="/" aria-label="ACME home" class="header__brand">MC.
       </a>
       <burger-menu max-width="600">
-        <nav class="navigation" aria-label="primary">
-          <ul role="list">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
+        {% include "partials/nav.njk" %}
       </burger-menu>
     </div>
   </div>
+  <div class="divider"></div>
 </header>

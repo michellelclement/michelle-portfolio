@@ -1,20 +1,21 @@
-.navigation ul {
+.nav ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.3rem 0.8rem;
+  gap: 0.3rem 2rem;
   padding: 0;
-}
 
-.navigation li {
-  margin: 0.1rem;
-}
+  li {
+    margin: 0.1rem;
+    font-size: rem(21);
+  }
 
-.navigation a {
-  text-decoration: none;
-  color: currentColor;
-}
+  a {
+    text-decoration: none;
+    color: currentColor;
+  }
 
-.navigation a:hover {
-  color: $dark;
+  a:hover {
+    color: $dark;
+  }
 }
