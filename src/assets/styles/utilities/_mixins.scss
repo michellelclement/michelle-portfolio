@@ -6,13 +6,17 @@
   border: 2px solid red;
 
   @include media($s-screen-up) {
-    padding: $gutter-large;
+    padding: calc(#{$gutter} * 2);
   }
 
-  // @include media($l-screen-up) {
-  //   padding-top: $verticalPadding;
-  //   padding-bottom: $verticalPadding;
-  // }
+  @include media($l-screen-up) {
+    padding-top: $verticalPadding;
+    padding-bottom: $verticalPadding;
+  }
+}
+
+@mixin verticalPadding {
+  padding: calc(#{$gutter} * 5) 0;
 }
 
 @mixin listReset {

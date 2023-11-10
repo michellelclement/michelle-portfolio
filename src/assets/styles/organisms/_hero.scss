@@ -5,7 +5,7 @@
 .hero__container {
   @include grid;
   @include rowGap;
-  padding: $gutter-xlarge 0;
+  padding: calc(#{$gutter} * 3) 0;
 }
 
 .hero__header-1 {
@@ -26,7 +26,7 @@
 .hero__sub-header {
   grid-row: 3;
   grid-column: 1 / span 12;
-  padding-top: $gutter-large;
+  padding-top: calc(#{$gutter} * 2);
   @include media($m-screen-up) {
     grid-column: 7 / span 5;
   }

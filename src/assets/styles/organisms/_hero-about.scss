@@ -3,8 +3,8 @@
 }
 
 .hero-about__container {
-  padding-top: $gutter-large;
-  padding-bottom: $gutter-xlarge;
+  padding-top: calc(#{$gutter} * 2);
+  padding-bottom: calc(#{$gutter} * 3);
   @include media($m-screen-up) {
     @include grid;
     @include colGap($gutter);
@@ -24,8 +24,8 @@
 .hero-about__image {
   display: flex;
   justify-content: center;
-  padding-top: $gutter-large;
-  padding-bottom: $gutter-large;
+  padding-top: calc(#{$gutter} * 2);
+  padding-bottom: calc(#{$gutter} * 2);
   @include media($m-screen-up) {
     display: block;
     grid-column: 1 / span 5;
@@ -50,7 +50,7 @@
 .hero-about__button {
   margin-top: $gutter;
   @include media($m-screen-up) {
-    margin-top: $gutter-small;
+    margin-top: calc(#{$gutter} / 2);
   }
 }
 

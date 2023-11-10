@@ -4,10 +4,11 @@
 
 .text-section__container {
   @include grid;
-  @include rowGap($gutter-large);
-  padding: $gutter-xxlarge 0;
+  @include verticalPadding;
+  @include rowGap(calc(#{$gutter} * 2));
+  // padding: calc(#{$gutter} * 4) 0;
   @include media($m-screen-up) {
-    @include rowGap($gutter-xlarge);
+    @include rowGap(calc(#{$gutter} * 3));
   }
 }
 
