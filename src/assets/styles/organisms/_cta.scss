@@ -1,7 +1,11 @@
 .cta {
   background-color: $dark;
   color: $light;
-  padding: calc(#{$gutter} * 6);
+  padding: calc(#{$gutter} * 4) $gutter;
+
+  @include media($m-screen-up) {
+    padding: calc(#{$gutter} * 6) 0;
+  }
 
   &:hover {
     background-color: transparent;
@@ -14,6 +18,11 @@
 }
 
 .cta__container p {
-  font-size: rem(110);
+  font-size: rem(60);
   text-align: center;
+
+  @include media($m-screen-up) {
+    font-size: rem(110);
+    
+  }
 }

@@ -1,3 +1,26 @@
 .footer {
+  @include wrapper;
   color: $dark;
+  width: 100%;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: $gutter;
+  padding: calc(#{$gutter} / 3) 0;
+  @include media($m-screen-up) {
+    flex-direction: row;
+  }
+}
+
+.footer__right-items {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__right-span {
+  padding: 0 calc(#{$gutter} / 3);
 }
