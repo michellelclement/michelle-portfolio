@@ -2,8 +2,18 @@
   background-color: $dark;
   color: $light;
   padding: calc(#{$gutter} * 6);
+
+  &:hover {
+    background-color: transparent;
+    color: $dark;
+  }
 }
 
 .cta__container {
   @include wrapper;
+}
+
+.cta__container p {
+  font-size: rem(110);
+  text-align: center;
 }
