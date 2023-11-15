@@ -1,7 +1,14 @@
 .hero {
   @include wrapper;
-  min-height: 80vh;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include media($m-screen-up) {
+    min-height: 80vh;
+  }
 }
+
 .hero__container {
   @include grid;
   @include rowGap;

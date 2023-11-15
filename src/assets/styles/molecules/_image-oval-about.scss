@@ -5,8 +5,7 @@
   border-radius: 1000px;
   position: relative;
   @include media($m-screen-up) {
-    // height: 500px;
-    // width: 350px;
+    min-height: 555px;
   }
 }
 

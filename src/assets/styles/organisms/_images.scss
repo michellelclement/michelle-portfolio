@@ -1,0 +1,13 @@
+.images {
+  @include verticalPadding;
+  min-height: 45vh;
+  @include media($m-screen-up) {
+    min-height: 75vh;
+  }
+}
+
+.images__container {
+  display: flex;
+  flex-direction: row;
+  gap: $gutter;
+}
