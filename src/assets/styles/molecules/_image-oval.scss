@@ -1,11 +1,10 @@
 .image-oval {
-  min-height: 255px;
-  min-width: 180px;
+  min-height: rem(300);
   aspect-ratio: 3/4;
-  border-radius: 1000px;
   position: relative;
+
   @include media($m-screen-up) {
-    min-height: 555px;
+    min-height: rem(400);
   }
 }
 
@@ -20,13 +19,13 @@
 }
 
 .image-oval__second {
-  top: 4px;
-  left: 4px;
+  top: rem(4);
+  left: rem(4);
   z-index: 2;
   background-color: $primary;
   @include media($m-screen-up) {
-    top: 13px;
-    left: 13px;
+    top: rem(13);
+    left: rem(13);
   }
 }
 
@@ -37,7 +36,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-  border-radius: 1000px;
+  border-radius: rem(1000);
 }
 
 .image-oval__first {
@@ -49,12 +48,12 @@
 }
 
 .image-oval__third {
-  top: 12px;
-  left: 12px;
+  top: rem(12);
+  left: rem(12);
   z-index: 1;
   background-color: black;
   @include media($m-screen-up) {
-    top: 35px;
-    left: 35px;
+    top: rem(35);
+    left: rem(35);
   }
 }

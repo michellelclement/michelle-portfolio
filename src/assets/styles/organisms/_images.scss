@@ -1,13 +1,14 @@
 .images {
   @include verticalPadding;
-  min-height: 45vh;
-  @include media($m-screen-up) {
-    min-height: 75vh;
-  }
 }
 
 .images__container {
   display: flex;
+  overflow-x: hidden;
   flex-direction: row;
-  gap: $gutter;
+  gap: calc($gutter * 3);
+  padding-bottom: rem(13);
+  @include media($m-screen-up) {
+    padding-bottom: rem(40);
+  }
 }
