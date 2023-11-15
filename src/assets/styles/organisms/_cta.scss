@@ -2,6 +2,7 @@
   background-color: $dark;
   color: $light;
   padding: calc(#{$gutter} * 4) $gutter;
+  cursor: pointer;
 
   @include media($m-screen-up) {
     padding: calc(#{$gutter} * 6) 0;
