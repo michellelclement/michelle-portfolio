@@ -1,6 +1,5 @@
 .button {
   @include buttonReset;
-  position: relative;
   overflow: hidden;
   position: relative;
   -webkit-transition: background-color 300ms ease-out;

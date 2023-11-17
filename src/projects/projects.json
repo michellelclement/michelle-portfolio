@@ -1,0 +1,5 @@
+{
+  "layout": "project",
+  "tags": "project",
+  "permalink": "index/{{ projectTitle }}/"
+}
