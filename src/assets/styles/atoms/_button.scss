@@ -1,17 +1,5 @@
 .button {
-  // @include buttonReset;
-  background: $dark;
-  padding: 0;
-  font-family: inherit;
-  border: none;
-  color: $light;
-  display: inline-block;
-  border-radius: $border-radius;
-  text-decoration: none;
-  padding: rem(16) rem(40);
-  font-size: rem(20);
-  vertical-align: middle;
-  text-align: center;
+  @include buttonReset;
   position: relative;
   overflow: hidden;
   position: relative;
@@ -38,8 +26,7 @@
 .button svg {
   position: absolute;
   width: 1.1em;
-  right: 0px;
-  right: 0rem;
+  right: 0;
   opacity: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);

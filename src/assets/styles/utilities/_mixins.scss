@@ -29,12 +29,14 @@
 }
 
 @mixin buttonReset {
+  display: inline-flex;
   background: $dark;
-  padding: 0;
+  color: $light;
+  width: max-content;
+  vertical-align: middle;
+  text-align: center;
   font-family: inherit;
   border: none;
-  color: $light;
-  display: inline-flex;
   border-radius: $border-radius;
   text-decoration: none;
   padding: rem(16) rem(32);
