@@ -5,22 +5,27 @@ title: Project
 <section class="hero">
   <div class="hero__container">
     <h1 class="hero__header-1 hero__text">{{ projectTitle }}</h1>
-
-    <div class="">
-      <p class="hero__sub-header hero__text">{{ projectSubtitle }}</p>
-      <a href="{{ project.url }}">
-        <div class="button">
-          <span>
-            Launch project<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.333 22.667 22.667 9.333M9.333 9.333h13.334v13.334"/></svg>
-          </span>
-        </div>
+    <div class="hero__sub-header">
+      <p class="hero__text">{{ projectSubtitle }}</p>
+      <a class="button hero__button" href="{{ project.url }}">
+        <span>
+          Launch project<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.333 22.667 22.667 9.333M9.333 9.333h13.334v13.334"/></svg>
+        </span>
       </a>
     </div>
   </div>
   <p class="hero__scroll p-small">Scroll for details</p>
 </section>
 <div class="divider"></div>
+
 <section class="project">
   <div class="project__container">
+   <div class="image-full">
+  <div class="image-full__container">
+    <div class="image-full__image">
+      <img src="/assets/images/project-1.png" alt="">
+    </div>
+  </div>
+</div>
   </div>
 </section>

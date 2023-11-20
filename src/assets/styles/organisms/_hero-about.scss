@@ -47,13 +47,6 @@
   }
 }
 
-.hero-about__button {
-  margin-top: $gutter;
-  @include media($m-screen-up) {
-    margin-top: calc(#{$gutter} / 2);
-  }
-}
-
 .hero-about__scroll {
   padding-bottom: $gutter;
 }

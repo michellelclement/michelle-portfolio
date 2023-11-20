@@ -38,3 +38,10 @@
     grid-column: 7 / span 5;
   }
 }
+
+.hero__button {
+  margin-top: $gutter;
+  @include media($m-screen-up) {
+    margin-top: calc(#{$gutter} / 2);
+  }
+}

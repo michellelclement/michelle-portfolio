@@ -1,0 +1,25 @@
+.image-full {
+  @include wrapper;
+  @include verticalPadding;
+}
+
+.image-full__container {
+  @include grid;
+  
+}
+
+.image-full__image {
+  @include col(10, 2);
+  // position: relative;
+  // aspect-ratio: 16/9;
+  // width: 100%;
+  box-shadow: 25px 25px $dark;
+}
+
+.image-full__image img {
+  box-shadow: 5px 4px $primary;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  // box-shadow: 5px 4px $primary;
+}
