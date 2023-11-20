@@ -1,7 +1,10 @@
 ---
 layout: default
 title: Project
+openingText: In this project I was required to build a still-stack website based around business logic used to control a centrally-owned dataset.
+projectText: Magnetic Eyes Lashes is a responsive, custom-built website, designed and built with the users wants and needs first, whilst maintaining a high design standard and ease of use. The site uses an authentication mechanism and provides a payment service to purchase its products. For the site owner, it uses a central database to manage the websites products and a blog section for marketing purposes
 ---
+
 <section class="hero">
   <div class="hero__container">
     <h1 class="hero__header-1 hero__text">{{ projectTitle }}</h1>
@@ -20,12 +23,24 @@ title: Project
 
 <section class="project">
   <div class="project__container">
-   <div class="image-full">
-  <div class="image-full__container">
-    <div class="image-full__image">
-      <img src="/assets/images/project-1.png" alt="">
+
+    <!-- Image -->
+    <div class="image-full">
+      <div class="image-full__container">
+        <div class="image-full__image">
+          <img src="/assets/images/project-1.png" alt="">
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+
+    <!-- Text Section -->
+    <section class="text-section">
+      <div class="text-section__container">
+        <h2 class="text-section__intro">{{ openingText }}</h2>
+        <div class="text-section__copy">
+          <p>{{ projectText }}</p>
+        </div>
+      </div>
+    </section>
   </div>
 </section>

@@ -10,16 +10,18 @@
 
 .image-full__image {
   @include col(10, 2);
-  // position: relative;
-  // aspect-ratio: 16/9;
-  // width: 100%;
-  box-shadow: 25px 25px $dark;
+  box-shadow: 15px 15px $dark;
+  @include media($s-screen-up) {
+    box-shadow: 25px 25px $dark;
+  }
 }
 
 .image-full__image img {
-  box-shadow: 5px 4px $primary;
+  box-shadow: 3px 3px $primary;
   height: 100%;
   width: 100%;
   object-fit: cover;
-  // box-shadow: 5px 4px $primary;
+  @include media($s-screen-up) {
+    box-shadow: 5px 4px $primary;
+  }
 }
