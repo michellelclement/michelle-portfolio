@@ -6,7 +6,7 @@
   justify-content: space-between;
   @include media($s-screen-down) {
     @include verticalPadding;
-   }
+  }
   @include media($m-screen-up) {
     height: 80vh;
   }
@@ -14,11 +14,15 @@
 
 .hero__container {
   @include grid;
-  padding: calc(#{$gutter} * 3) 0;
-  @include media($s-screen-down) {
-    @include rowGap;
+  @include rowGap;
+  container-type: inline-size;
+  padding-top: calc(#{$gutter} * 3);
+  padding-bottom: calc(#{$gutter} * 3);
+  @include media($s-screen-up) {
+    padding-top: calc(#{$gutter} * 3);
+    padding-bottom: calc(#{$gutter} * 3);
   }
-  
+
   @include media($m-screen-up) {
     grid-column: 2 / span 5;
   }
@@ -27,6 +31,9 @@
     padding-top: $gutter;
   }
 
+  &--project {
+    padding-top: 0;
+  }
 }
 
 .hero__header-1 {
@@ -59,5 +66,28 @@
   padding-top: calc(#{$gutter} * 2);
   @include media($m-screen-up) {
     grid-column: 7 / span 5;
+  }
+
+  &--project {
+    @include media($m-screen-down) {
+      padding-top: calc(#{$gutter} * 2);
+      padding-bottom: calc(#{$gutter} / 2);
+    }
+  }
+}
+
+.hero__cta {
+  &--project {
+    grid-row: 3;
+    grid-column: 1 / span 12;
+    @include media($m-screen-up) {
+      grid-column: 9 / span 4;
+    }
+  }
+}
+
+.hero__button {
+  &--project {
+    margin-top: calc(#{$gutter} / 2);
   }
 }
