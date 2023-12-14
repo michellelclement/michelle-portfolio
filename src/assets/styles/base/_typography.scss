@@ -33,17 +33,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: rem(62);
-  line-height: 1.1;
-  @include media($s-screen-up) {
-    font-size: rem(90);
-  }
-  @include media($m-screen-up) {
-    font-size: rem(120);
-  }
-  @include media($l-screen-up) {
-    font-size: rem(150);
-  }
+@include h1Large;
+}
+
+.h1-medium {
+  @include h1Medium;
 }
 
 h2 {

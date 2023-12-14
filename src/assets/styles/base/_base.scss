@@ -22,24 +22,6 @@ body {
   background-color: $primary;
 }
 
-// section,
-// div {
-//   border: 2px solid red;
-// }
-
-// header,
-// main,
-// footer {
-  // width: 100%;
-  // max-width: $max-width;
-  // padding: $gutter;
-  // margin: 0 auto;
-// }
-
-// main {
-//   flex-grow: 1;
-// }
-
 a {
   color: currentColor;
   text-decoration: none;
@@ -64,4 +46,10 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.js-animate-in,
+.js-animate-in-children > * {
+  opacity: 0;
+  transform: translateY(rem(20));
 }

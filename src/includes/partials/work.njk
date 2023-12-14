@@ -2,7 +2,7 @@
   <div class="work__container">
 
     {%- for project in collections.project -%}
-    <div class="work__item">
+    <div class="work__item js-animate-in">
       <a href="{{ project.url }}" class="work__image">
         <div class="work__image--container">
           <img src="/assets/images/{{ project.data.projectPreviewImg }}" alt="">
@@ -13,8 +13,8 @@
           </div>
         </div>
       </a>
-      <p class="work__title">{{ project.data.projectTitle }}</p>
-      <p class="work__descrip p-small">{{ project.data.projectSubtitle }}</p>
+      <p class="work__title js-animate-in">{{ project.data.projectTitle }}</p>
+      <p class="work__descrip p-small js-animate-in">{{ project.data.projectSubtitle }}</p>
     </div>
     {%- endfor -%}
 

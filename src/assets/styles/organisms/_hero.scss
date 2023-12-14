@@ -24,9 +24,12 @@
 
 .hero__header-2 {
   grid-row: 2;
-  grid-column: 4 / span 5;
+  grid-column: 2 / span 5;
   @include media($s-screen-up) {
-    grid-column: 4 / span 5;
+    grid-column: 2 / span 5;
+  }
+  @include media($m-screen-up) {
+    grid-column: 3 / span 5;
   }
 }
 
