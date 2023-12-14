@@ -33,12 +33,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-@include h1Large;
+  font-size: 20cqw;
+  @include media($m-screen-up) {
+    font-size: 14cqw;
+  }
+  
 }
 
-.h1-medium {
-  @include h1Medium;
-}
+// .h1-medium {
+//   @include h1Medium;
+// }
 
 h2 {
   font-size: rem(30);

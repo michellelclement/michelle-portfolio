@@ -8,24 +8,31 @@
     @include verticalPadding;
    }
   @include media($m-screen-up) {
-    min-height: 80vh;
+    height: 80vh;
   }
 }
 
 .hero__container {
   @include grid;
-  @include rowGap;
   padding: calc(#{$gutter} * 3) 0;
+  @include media($s-screen-down) {
+    @include rowGap;
+  }
+  
   @include media($m-screen-up) {
     grid-column: 2 / span 5;
+  }
+
+  @include media($xxl-screen-up) {
+    padding-top: $gutter;
   }
 
 }
 
 .hero__header-1 {
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 12;
   @include media($m-screen-up) {
-    grid-column: 2 / span 5;
+    grid-column: 2 / span 12;
   }
 }
 
@@ -33,10 +40,16 @@
   grid-row: 2;
   grid-column: 2 / span 5;
   @include media($s-screen-up) {
-    grid-column: 2 / span 5;
+    grid-column: 2 / span 11;
   }
   @include media($m-screen-up) {
-    grid-column: 3 / span 5;
+    grid-column: 3 / span 10;
+  }
+  @include media($l-screen-up) {
+    grid-column: 3 / span 10;
+  }
+  @include media($xl-screen-up) {
+    grid-column: 4 / span 9;
   }
 }
 

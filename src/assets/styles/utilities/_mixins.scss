@@ -72,20 +72,26 @@
 
 //Headings
 
-@mixin h1Large {
-  font-size: rem(90);
-  line-height: 1.1;
-  font-weight: 800;
-  @include media($s-screen-up) {
-    font-size: rem(120);
-  }
-  @include media($m-screen-up) {
-    font-size: rem(150);
-  }
-  @include media($l-screen-up) {
-    font-size: rem(200);
-  }
-}
+// @mixin h1Large {
+//   font-size: rem(60);
+//   line-height: 1.1;
+//   font-weight: 800;
+//   @include media($xs-screen-up) {
+//     font-size: rem(90);
+//   }
+//   @include media($s-screen-up) {
+//     font-size: rem(120);
+//   }
+//   @include media($m-screen-up) {
+//     font-size: rem(150);
+//   }
+//   @include media($l-screen-up) {
+//     font-size: rem(190);
+//   }
+//   @include media($xl-screen-up) {
+//     font-size: rem(220);
+//   }
+// }
 
 @mixin h1Medium {
   font-size: rem(90);
