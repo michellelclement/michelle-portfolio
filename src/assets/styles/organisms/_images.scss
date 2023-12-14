@@ -1,5 +1,8 @@
 .images {
-  @include verticalPadding;
+  padding-bottom: calc(#{$gutter} * 3);
+  @include media($m-screen-up) {
+    @include verticalPadding;
+  }
 }
 
 .images__container {
