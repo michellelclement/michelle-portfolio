@@ -4,11 +4,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @include media($s-screen-down) {
-    @include verticalPadding;
-  }
   @include media($m-screen-up) {
     height: 80vh;
+  }
+
+  &--project {
+    @include verticalPadding;
   }
 }
 
@@ -31,8 +32,19 @@
     padding-top: $gutter;
   }
 
-  &--project {
+  &--project{
     padding-top: 0;
+  }
+
+  &--about {
+    padding-top: 0;
+    @include rowGap(0);
+    @include media($s-screen-up) {
+      padding-bottom: 0;
+    }
+    @include media($m-screen-down) {
+      display: block;
+    }
   }
 }
 
@@ -40,6 +52,12 @@
   grid-column: 1 / span 12;
   @include media($m-screen-up) {
     grid-column: 2 / span 12;
+  }
+
+  &--about {
+    @include media($m-screen-up) {
+      grid-column: 2 / span 2;
+    }
   }
 }
 
@@ -60,6 +78,23 @@
   }
 }
 
+.hero__image {
+  &--about {
+    display: flex;
+    justify-content: center;
+    padding-top: calc(#{$gutter} * 2);
+    padding-bottom: calc(#{$gutter} * 2);
+    @include media($m-screen-up) {
+      display: block;
+      grid-column: 5 / span 3;
+      padding-bottom: 0;
+      padding-top: 0;
+      grid-row: 2;
+      margin-top: rem(-50);
+    }
+  }
+}
+
 .hero__sub-header {
   grid-row: 3;
   grid-column: 1 / span 12;
@@ -74,12 +109,23 @@
       padding-bottom: calc(#{$gutter} / 2);
     }
   }
+  &--about {
+    @include media($m-screen-down) {
+      padding-bottom: calc(#{$gutter} / 2);
+    }
+    @include media($m-screen-up) {
+      grid-column: 6 / span 3;
+      margin-top: rem(-75);
+    }
+  }
 }
 
 .hero__cta {
-  &--project {
+  &--project,
+  &--about {
     grid-row: 3;
     grid-column: 1 / span 12;
+    padding-bottom: calc(#{$gutter} * 2);
     @include media($m-screen-up) {
       grid-column: 9 / span 4;
     }
@@ -87,7 +133,16 @@
 }
 
 .hero__button {
-  &--project {
-    margin-top: calc(#{$gutter} / 2);
+  &--project,
+  &--about {
+    @include media($m-screen-up) {
+      margin-top: calc(#{$gutter} / 2);
+    }
+  }
+}
+
+.hero__scroll {
+  @include media($l-screen-up) {
+    padding-bottom: $gutter;
   }
 }

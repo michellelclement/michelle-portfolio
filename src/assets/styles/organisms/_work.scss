@@ -8,7 +8,6 @@
   @include media($m-screen-up) {
     @include colGap(calc($gutter * 3));
     @include rowGap(calc($gutter * 2));
-    // justify-items: center;
     grid-column: 2 / span 5;
   }
 }
