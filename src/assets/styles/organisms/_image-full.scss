@@ -1,6 +1,11 @@
 .image-full {
   @include wrapper;
-  @include verticalPadding;
+  padding-top: calc(#{$gutter} * 4);
+
+  @include media($m-screen-up) {
+    padding-top: calc(#{$gutter} * 5);
+    padding-bottom: calc(#{$gutter} * 5);
+  }
 }
 
 .image-full__container {

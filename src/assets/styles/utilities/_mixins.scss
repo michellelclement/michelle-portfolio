@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: $gutter;
 
-  @include media($s-screen-up) {
+  @include media($m-screen-up) {
     padding: calc(#{$gutter} * 2);
   }
 
@@ -15,9 +15,11 @@
 }
 
 @mixin verticalPadding {
-  padding: calc(#{$gutter} * 3) 0;
+  padding-top: calc(#{$gutter} * 3);
+  padding-bottom: calc(#{$gutter} * 3);
   @include media($m-screen-up) {
-    padding: calc(#{$gutter} * 5) 0;
+    padding-top: calc(#{$gutter} * 5);
+    padding-bottom: calc(#{$gutter} * 5);
   }
 }
 

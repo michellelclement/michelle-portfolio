@@ -7,5 +7,12 @@
 }
 
 .hero-project__sub-header {
-  padding-bottom: calc(#{$gutter} / 2);
+  @include media($m-screen-down) {
+    padding-top: calc(#{$gutter} * 2);
+    padding-bottom: calc(#{$gutter} / 2);
+  }
+}
+
+.hero-project__button {
+  margin-top: calc(#{$gutter} / 2);
 }
