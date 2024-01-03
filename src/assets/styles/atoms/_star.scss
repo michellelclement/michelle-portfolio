@@ -1,7 +1,8 @@
-.plus {
+.star {
   position: absolute;
   width: 100px;
-  right: 19px;
+  left: 100px;
+  top: 400px;
   z-index: -1;
 
   @include media($s-screen-up) {

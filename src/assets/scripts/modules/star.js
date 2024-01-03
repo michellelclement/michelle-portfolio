@@ -1,17 +1,7 @@
 import { gsap } from "gsap";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-// Plus Spin
-const plus = document.getElementById('plus');
-gsap.to(plus, {
-  duration: 2,
-  rotation: 360,
-  repeat: 20,
-  ease: "none"
-});
+gsap.registerPlugin(ScrollTrigger);
 
 // Start scroll and spin
 const tl = gsap.timeline({
