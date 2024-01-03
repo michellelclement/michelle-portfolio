@@ -1,11 +1,24 @@
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { InertiaPlugin } from "gsap/InertiaPlugin";
 
+gsap.registerPlugin(InertiaPlugin);
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-// gsap.from(".hero__text", {duration: 2, opacity: 0, stagger: 0.5});
+// Plus Spin
+const plus = document.getElementById('plus');
 
+// track the rotation velocity
+gsap.to(plus, {
+  duration: 2,
+  rotation: 360,
+  repeat: -1,
+  ease: "none"
+});
+
+
+// Smooth Scroller
 let smoother = ScrollSmoother.create({
   smooth: 1.5,
   smoothTouch: 0.1
