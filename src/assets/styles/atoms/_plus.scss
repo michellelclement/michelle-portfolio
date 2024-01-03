@@ -1,5 +1,21 @@
 .plus {
   position: absolute;
-  width: 200px;
-  right: 200px;
+  width: 100px;
+  right: 19px;
+  z-index: -1;
+
+  @include media($s-screen-up) {
+    width: 150px;
+    right: 100px;
+  }
+
+  @include media($m-screen-up) {
+    width: 200px;
+    right: 80px;
+  }
+
+  @include media($l-screen-up) {
+    right: 200px;
+  }
+
 }
