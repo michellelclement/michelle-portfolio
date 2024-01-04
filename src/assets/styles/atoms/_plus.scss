@@ -1,7 +1,7 @@
 .plus {
   position: absolute;
   width: 75px;
-  right: 19px;
+  right: 25px;
   z-index: -1;
 
   @include media($s-screen-up) {
