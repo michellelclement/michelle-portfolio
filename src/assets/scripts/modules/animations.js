@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-// Plus Spin
+// PLUS
 const plus = document.getElementById('plus');
 gsap.to(plus, {
   duration: 2,
@@ -13,6 +13,7 @@ gsap.to(plus, {
   ease: "none"
 });
 
+// STAR
 // Start scroll and spin
 const tl = gsap.timeline({
   scrollTrigger: {
@@ -20,7 +21,7 @@ const tl = gsap.timeline({
     pin: true,
     trigger: '#star',
     start: "center center",
-    markers: true,
+    end: "+=1100",
   },
 });
 

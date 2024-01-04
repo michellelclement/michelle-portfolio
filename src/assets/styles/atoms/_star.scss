@@ -1,13 +1,13 @@
 .star {
   position: absolute;
   width: 100px;
-  left: 100px;
+  left: 200px;
   top: 400px;
   z-index: -1;
 
   @include media($s-screen-up) {
-    width: 150px;
-    right: 100px;
+    left: 250px;
+    top: 450px;
   }
 
   @include media($m-screen-up) {
