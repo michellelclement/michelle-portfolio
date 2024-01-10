@@ -16,14 +16,6 @@ gsap.to(plus, {
 // STAR
 const star = document.getElementById('star');
 
-// Initial slow rotation animation upon page load
-gsap.to(star, {
-  duration: 8,
-  rotation: 360,
-  repeat: -1,
-  ease: "none",
-});
-
 // Timeline for scroll-triggered rotation speed variation
 const tl = gsap.timeline({
   scrollTrigger: {

@@ -1,30 +1,28 @@
 .star {
   position: absolute;
-  width: 85px;
-  left: 200px;
-  top: 370px;
+  width: 100px;
+  left: 150px;
+  top: 400px;
   z-index: -1;
 
   @include media($s-screen-up) {
-    width: 100px;
-    left: 250px;
-    top: 450px;
+    left: 350px;
   }
 
   @include media($m-screen-up) {
     width: 200px;
-    right: 80px;
+    left: 100px;
+    top: 350px;
   }
 
   @include media($l-screen-up) {
-    right: 200px;
+    left: 150px;
+    top: 400px;
   }
 }
 
 .star svg {
-
   path {
-    fill: #404DA3;
+    fill: #404da3;
   }
-  
 }
