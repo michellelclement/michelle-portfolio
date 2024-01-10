@@ -9,7 +9,7 @@ const plus = document.getElementById('plus');
 gsap.to(plus, {
   duration: 2,
   rotation: 360,
-  repeat: 20,
+  repeat: -1,
   ease: "none"
 });
 
