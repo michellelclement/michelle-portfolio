@@ -35,9 +35,9 @@ const tl = gsap.timeline({
   },
 });
 
-// tl.to(star, {
-//   rotateZ: 500,
-// });
+tl.to(star, {
+  rotateZ: 500,
+});
 
 
 
