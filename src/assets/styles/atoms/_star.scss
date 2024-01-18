@@ -1,23 +1,23 @@
 .star {
   position: absolute;
-  width: 100px;
-  left: 150px;
-  top: 400px;
+  width: rem(100);
+  left: rem(150);
+  top: rem(400);
   z-index: -1;
 
   @include media($s-screen-up) {
-    left: 350px;
+    left: rem(350);
   }
 
   @include media($m-screen-up) {
-    width: 200px;
-    left: 100px;
-    top: 350px;
+    width: rem(200);
+    left: rem(100);
+    top: rem(350);
   }
 
   @include media($l-screen-up) {
-    left: 150px;
-    top: 400px;
+    left: rem(150);
+    top: rem(400);
   }
 }
 
