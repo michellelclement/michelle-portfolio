@@ -1,10 +1,10 @@
-<section class="hero js-animate-in">
-  <div class="hero__container js-animate-in">
-    <h1 class="hero__header-1 hero__text">{{ heading1 }}</h1>
-    <h1 class="hero__header-2 hero__text">{{ heading2 }}</h1>
-    <p class="hero__sub-header hero__text">{{ subHeading }}</p>
+<section class="hero">
+  <div class="hero__container">
+    <h1 class="hero__header-1 hero__text js-hero-animate-this">{{ heading1 }}</h1>
+    <h1 class="hero__header-2 hero__text js-hero-animate-this">{{ heading2 }}</h1>
+    <p class="hero__sub-header hero__text js-hero-animate-this">{{ subHeading }}</p>
   </div>
-  <p class="hero__scroll p-small">Scroll for details</p>
+  <p class="hero__scroll p-small js-hero-animate-this">Scroll for details</p>
 
   <div class="star" id="star">
     {% include "svgs/star.njk" %}

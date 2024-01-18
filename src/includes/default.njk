@@ -23,18 +23,22 @@
     <link rel="stylesheet" href="{% webpack 'main.css' %}">
     
   </head>
-  <body>
+  <body data-barba="wrapper">
+    <div class="load-container">
+      <div class="loading-screen"></div>
+    </div>
 
     <div id="smooth-wrapper">
       <div id="smooth-content">
         {% include "partials/header.njk" %}
-          <main id="main-content" tabindex="-1" class="wrapper">
+          <main id="main-content" tabindex="-1" class="wrapper" data-barba="container" data-barba-namespace="home-section">
             {{ content | safe }}
           </main>
         {% include "partials/footer.njk" %}
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <script async defer src="{% webpack 'main.js' %}"></script>
   </body>
 </html>
