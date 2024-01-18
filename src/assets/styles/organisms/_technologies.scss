@@ -21,6 +21,7 @@
 }
 
 .technologies__copy {
+  @extend .p-large;
   grid-column: 1 / span 11;
   @include media($m-screen-up) {
     grid-column: 2 / span 9;

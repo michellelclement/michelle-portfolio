@@ -45,3 +45,7 @@
 .work__descrip {
   padding-top: $gutter;
 }
+
+.work__descrip {
+  @extend .p-small;
+}

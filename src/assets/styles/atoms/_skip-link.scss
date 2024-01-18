@@ -9,6 +9,10 @@
   border: $border-primary;
   border-radius: $border-radius;
   text-decoration: none;
+
+  p {
+    @extend .p-small;
+  }
 }
 
 .skip-link:hover {
