@@ -28,7 +28,7 @@ function pageTransition() {
     width: '100%',
     left: '100%',
     ease: 'Expo.easeInOut',
-    delay: 0.3
+    delay: 0.2
   });
   tl.set('.loading-screen', { left: '-100%' });
 }
@@ -59,7 +59,32 @@ function animateTextInSections() {
   }
 }
 
-animateTextInSections();
+function plusAnimation() {
+  const plus = document.getElementById('plus');
+    gsap.to(plus, {
+    duration: 2,
+    rotation: 360,
+    repeat: -1,
+    ease: "none"
+  });
+}
+
+function starAnimation() {
+  const star = document.getElementById('star');
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      scrub: 1,
+      pin: true,
+      trigger: '#star',
+      start: "center center",
+      end: () => "+=" + document.body.clientHeight,
+    },
+  });
+
+  tl.to(star, {
+    rotateZ: 500,
+  });
+}
 
 barba.init({
   sync: true,
@@ -68,20 +93,25 @@ barba.init({
       async leave(data) {
         const done = this.async();
         pageTransition();
-        await delay(1000);
+        await delay(300);
         done();
       },
 
       async enter(data) {
         // Ensure that the elements are in the DOM before initiating the animation
-        await delay(500); // Adjust the delay as needed
+        await delay(300); // Adjust the delay as needed
         heroAnimation();
+        plusAnimation();
+        starAnimation();
       },
 
       async once(data) {
         // Ensure that the elements are in the DOM before initiating the animation
-        await delay(500); // Adjust the delay as needed
+        await delay(300); // Adjust the delay as needed
         heroAnimation();
+        plusAnimation();
+        starAnimation();
+        animateTextInSections();
       },
 
       async after(data) {
