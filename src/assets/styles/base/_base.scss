@@ -52,4 +52,8 @@ ol {
 .js-animate-in-children > * {
   opacity: 0;
   transform: translateY(rem(20));
+
+  .no-js & {
+    opacity: 1;
+  }
 }

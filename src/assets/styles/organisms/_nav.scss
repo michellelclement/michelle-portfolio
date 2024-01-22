@@ -5,9 +5,19 @@
   gap: 0.3rem 2rem;
   padding: 0;
 
+  .no-js & {
+   @include media($m-screen-down) {
+    flex-direction: column;
+    align-items: start;
+  }
+  }
+
   li {
     margin: 0.1rem;
-    font-size: rem(21);
+
+    .no-js & {
+      padding: calc($gutter * 0.5) 0;
+     }
   }
 
   a {
@@ -18,4 +28,6 @@
   a:hover {
     text-decoration: underline;
   }
+
+
 }
