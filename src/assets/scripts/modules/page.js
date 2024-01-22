@@ -93,21 +93,20 @@ barba.init({
       async leave(data) {
         const done = this.async();
         pageTransition();
-        await delay(300);
+        await delay(1000);
+        window.scrollTo(0, 0);
         done();
       },
 
       async enter(data) {
-        // Ensure that the elements are in the DOM before initiating the animation
-        await delay(300); // Adjust the delay as needed
+        await delay(500);
         heroAnimation();
         plusAnimation();
         starAnimation();
       },
 
       async once(data) {
-        // Ensure that the elements are in the DOM before initiating the animation
-        await delay(300); // Adjust the delay as needed
+        await delay(700);
         heroAnimation();
         plusAnimation();
         starAnimation();
@@ -115,7 +114,6 @@ barba.init({
       },
 
       async after(data) {
-        // Reattach event listeners or perform other tasks after the new page is added to the DOM
         animateTextInSections();
       },
     }

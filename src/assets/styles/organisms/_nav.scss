@@ -5,11 +5,11 @@
   gap: 0.3rem 2rem;
   padding: 0;
 
-  .no-js & {
-   @include media($m-screen-down) {
-    flex-direction: column;
-    align-items: start;
-  }
+    .no-js & {
+    @include media($m-screen-down) {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   li {
