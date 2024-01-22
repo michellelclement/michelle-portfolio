@@ -59,6 +59,14 @@ function animateTextInSections() {
   }
 }
 
+// Function to close the mobile menu
+function closeMobileMenu() {
+  const burgerMenu = document.querySelector('burger-menu');
+  if (burgerMenu) {
+    burgerMenu.toggle('closed');
+  }
+}
+
 function plusAnimation() {
   const plus = document.getElementById('plus');
     gsap.to(plus, {
@@ -103,6 +111,8 @@ barba.init({
         heroAnimation();
         plusAnimation();
         starAnimation();
+        // Close the mobile menu when a new page is entered
+        closeMobileMenu();
       },
 
       async once(data) {
