@@ -47,6 +47,7 @@
     "webpack-manifest-plugin": "^5.0.0"
   },
   "dependencies": {
+    "@google-cloud/translate": "^8.0.3",
     "gsap": "npm:@gsap/business@^3.12.2"
   }
 }

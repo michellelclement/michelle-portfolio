@@ -1,21 +1,21 @@
 ---
 layout: default
 title: Training
-header: Learning stuff
+header: Fun Stuff
+subheader: Learning things
 ---
 
 <section class="hero hero--project">
   <div class="hero__container hero__container--project">
     <h1 class="hero__header-1 hero__header-1--project js-animate-in">{{ header }}</h1>
     <div class="hero__cta--project js-animate-in">
-      <p class="hero__sub-header--project js-animate-in">{{ projectSubtitle }}</p>
+      <p class="hero__sub-header--project js-animate-in">{{ subheader }}</p>
     </div>
   </div>
   <p class="hero__scroll">Scroll for details</p>
 </section>
 
 <div class="divider"></div>
-{% include "partials/image-full.njk" %}
-{% include "partials/text-section.njk" %}
-{% include "partials/technologies.njk" %}
+{% include "partials/accordion.njk" %}
+
 <div class="divider"></div>
