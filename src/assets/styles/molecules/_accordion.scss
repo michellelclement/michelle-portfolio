@@ -13,6 +13,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: rem(18);
+
+  @include media($m-screen-up) {
+    font-size: rem(27);
+  }
+}
+
+.accordion__item {
+  padding-top: $gutter;
 }
 
 .accordion__item-content-container {
