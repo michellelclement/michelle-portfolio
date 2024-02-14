@@ -1,9 +1,9 @@
-// .accordion__item {
-//   border: 2px solid red;
-// }
-
 .accordion {
   padding: calc($gutter *2) 0;
+  grid-column: 1 / span 12;
+  @include media($m-screen-up) {
+    grid-column: 1 / span 8;
+  }
 }
 
 .accordion__button {
@@ -17,7 +17,11 @@
 
 .accordion__item-content-container {
   ul {
-    padding-left: rem(15);
+    padding-left: rem(20);
+
+    li {
+      list-style-type: circle;
+    }
   }
   p {
     @extend .p-small;

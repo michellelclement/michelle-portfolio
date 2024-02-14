@@ -1,3 +1,13 @@
 .accordion-section__container {
   @include wrapper;
+  @include grid;
+  @include verticalPadding;
+  @include rowGap(calc(#{$gutter} * 2));
+  @include media($m-screen-up) {
+    @include rowGap(calc(#{$gutter} * 3));
+  }
+}
+
+.accordion-section__header {
+  grid-column: 1 / span 12;
 }
