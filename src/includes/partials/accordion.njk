@@ -1,17 +1,64 @@
 <section class="accordion-section">
   <div class="accordion-section__container">
+    <h3>This is the accordion Header</h3>
 
     <div class="accordion">
       
       <div class="accordion__item">
-        <h3>This is the accordion</h3>
-        <div class="accordion__item-header">Accordion Item Header</div>
-        <div class="accordion__item-content">Accordion Content 1</div>
+        <button class="accordion__button js-accordion">
+          <h3 class="accordion__item-header">Accordion Item Header</h3>
+          <div class="accordion__icon">
+            <span class="visually-hidden">Toggle accord</span>
+          </div>
+        </button>
+        
+        <div class="accordion__item-content">
+          <div class="accordion__item-content-container">
+            <ul>
+              {% for item in accordionContent1 %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+     <div class="accordion__item">
+        <button class="accordion__button js-accordion">
+          <h3 class="accordion__item-header">Accordion Item 2 Header</h3>
+          <div class="accordion__icon">
+            <span class="visually-hidden">Toggle accord</span>
+          </div>
+        </button>
+        
+        <div class="accordion__item-content">
+          <div class="accordion__item-content-container">
+            <ul>
+              {% for item in accordionContent2 %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div class="accordion__item">
-        <div class="accordion__item-header">Accordion Item Header</div>
-        <div class="accordion__item-content">Accordion Content 1</div>
+        <button class="accordion__button js-accordion">
+          <h3 class="accordion__item-header">Accordion Item 3 Header</h3>
+          <div class="accordion__icon">
+            <span class="visually-hidden">Toggle accord</span>
+          </div>
+        </button>
+        
+        <div class="accordion__item-content">
+          <div class="accordion__item-content-container">
+            <ul>
+              {% for item in accordionContent3 %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
       </div>
 
     </div>

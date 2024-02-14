@@ -30,21 +30,11 @@
 }
 
 @mixin buttonReset {
-  display: inline-flex;
-  background: $dark;
-  color: $light;
-  width: max-content;
-  vertical-align: middle;
-  text-align: center;
   font-family: inherit;
   border: none;
-  border-radius: $border-radius;
+  background-color: transparent;
   text-decoration: none;
-  padding: rem(16) rem(32);
-  font-size: rem(20);
-  @include media($m-screen-up) {
-    font-size: rem(27);
-  }
+  padding: 0;
 }
 
 @mixin svgPad($width, $height) {
