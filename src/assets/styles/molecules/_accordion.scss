@@ -1,5 +1,9 @@
-.accordion__item {
-  border: 2px solid red;
+// .accordion__item {
+//   border: 2px solid red;
+// }
+
+.accordion {
+  padding: calc($gutter *2) 0;
 }
 
 .accordion__button {
@@ -11,8 +15,13 @@
   align-items: center;
 }
 
-.accordion__item-content-container p {
-  @extend .p-small;
+.accordion__item-content-container {
+  ul {
+    padding-left: rem(15);
+  }
+  p {
+    @extend .p-small;
+  }
 }
 
 .accordion__item-header {
@@ -55,4 +64,9 @@
       transform: rotate(0);
     }
   }
+}
+
+.accordion__item-content {
+  height: 0;
+  overflow: hidden;
 }
