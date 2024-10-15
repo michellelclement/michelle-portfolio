@@ -19,15 +19,15 @@
       padding: calc($gutter * 0.5) 0;
      }
   }
+}
 
-  a {
-    text-decoration: none;
-    font-size: rem(21);
-  }
+.nav__link a {
+  @include hover-underline;
+  font-size: rem(21);
+}
 
-  a:hover {
-    text-decoration: underline;
-  }
-
-
+.nav__button a {
+  @include hover-underline--white;
+  overflow: visible;
+  font-size: rem(21);
 }
