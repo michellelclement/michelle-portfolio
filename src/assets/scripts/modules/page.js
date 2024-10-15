@@ -41,9 +41,8 @@ function heroAnimation() {
 function animateTextInSections() {
   const items = Array.from(document.querySelectorAll('.js-animate-in, .js-animate-in-children > *'));
   if (items.length) {
-    ScrollTrigger.refresh();
     ScrollTrigger.batch(items, {
-      start: 'top 80%',
+      start: 'top 70%',
       end: 'bottom 20%',
       onEnter: (els) => {
         gsap.to(els, {
@@ -61,37 +60,10 @@ function animateTextInSections() {
 
 // Function to close the mobile menu
 function closeMobileMenu() {
-  const burgerMenu = document.querySelector('burger-menu');
+  const burgerMenu = document.querySelector('.burger-menu');
   if (burgerMenu) {
-    burgerMenu.toggle('closed');
+    burgerMenu.classList.toggle('closed'); // Ensure it uses classList.toggle
   }
-}
-
-function plusAnimation() {
-  const plus = document.getElementById('plus');
-    gsap.to(plus, {
-    duration: 2,
-    rotation: 360,
-    repeat: -1,
-    ease: "none"
-  });
-}
-
-function starAnimation() {
-  const star = document.getElementById('star');
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      scrub: 1,
-      pin: true,
-      trigger: '#star',
-      start: "center center",
-      end: () => "+=" + document.body.clientHeight,
-    },
-  });
-
-  tl.to(star, {
-    rotateZ: 500,
-  });
 }
 
 barba.init({
@@ -100,30 +72,34 @@ barba.init({
     {
       async leave(data) {
         const done = this.async();
-        pageTransition();
-        await delay(1000);
-        window.scrollTo(0, 0);
+        try {
+          pageTransition();
+          await delay(1000);
+          window.scrollTo(0, 0);
+        } catch (error) {
+          console.error("Error during leave transition:", error);
+        }
         done();
       },
 
       async enter(data) {
-        await delay(500);
+        // Clear previous ScrollTriggers before initializing new ones
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+        // Re-initialize animations for new content
         heroAnimation();
-        plusAnimation();
-        starAnimation();
-        // Close the mobile menu when a new page is entered
         closeMobileMenu();
+        // animateTextInSections(); // Animate text when entering a new page
       },
 
       async once(data) {
-        await delay(700);
+        // Initialize animations on the first load
         heroAnimation();
-        plusAnimation();
-        starAnimation();
-        animateTextInSections();
+        animateTextInSections(); // Animate text on first load
       },
 
       async after(data) {
+        // Ensure text animations work after every transition
         animateTextInSections();
       },
     }
@@ -131,7 +107,9 @@ barba.init({
 });
 
 // Smooth Scroller
-let smoother = ScrollSmoother.create({
-  smooth: 1.5,
-  smoothTouch: 0.1
+window.addEventListener('load', () => {
+  let smoother = ScrollSmoother.create({
+    smooth: 1.5,
+    smoothTouch: 0.1
+  });
 });
