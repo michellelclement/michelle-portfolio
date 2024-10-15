@@ -56,14 +56,13 @@
   }
 
   &--about {
-    @extend .h1-medium;
+
     @include media($m-screen-up) {
       grid-column: 2 / span 2;
     }
   }
 
   &--project {
-    @extend .h1-medium;
     min-height: rem(300);
   }
 }
@@ -149,7 +148,6 @@
 }
 
 .hero__scroll {
-  @extend .p-small;
   @include media($l-screen-up) {
     padding-bottom: $gutter;
   }
