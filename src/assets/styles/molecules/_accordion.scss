@@ -32,9 +32,6 @@
       list-style-type: circle;
     }
   }
-  p {
-    @extend .p-small;
-  }
 }
 
 .accordion__item-header {
