@@ -132,8 +132,7 @@
 }
 
 .hero__button {
-  &--project,
-  &--about {
+  &--project {
     @include media($m-screen-up) {
       margin-top: calc(#{$gtr} / 2);
     }

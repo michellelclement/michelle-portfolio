@@ -66,32 +66,12 @@
   }
 }
 
-// .hero-about__image {
-//   display: flex;
-//   justify-content: center;
-//   padding-top: calc(#{$gtr} * 2);
-//   padding-bottom: calc(#{$gtr} * 2);
-//   @include media($m-screen-up) {
-//     display: block;
-//     grid-column: 1 / span 5;
-//     padding-bottom: 0;
-//   }
-//   @include media($l-screen-up) {
-//     grid-column: 5 / span 4;
-//   }
-// }
+.hero-about__button {
+  @include media($m-screen-up) {
+    margin-top: calc(#{$gtr} / 2);
+  }
+}
 
-// .hero-about__sub-heading {
-//   @include media($m-screen-up) {
-//     align-self: end;
-//     grid-column: 7 / span 5;
-//   }
-//   @include media($l-screen-up) {
-//     align-self: end;
-//     grid-column: 9 / span 3;
-//   }
-// }
-
-// .hero-about__scroll {
-//   padding-bottom: $gtr;
-// }
+.hero-about__scroll {
+  padding-bottom: $gtr;
+}
