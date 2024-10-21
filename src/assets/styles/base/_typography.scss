@@ -7,11 +7,20 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 20cqw;
   font-weight: 600;
+
   @include media($m-screen-up) {
-    font-size: 14cqw;
+    font-size: 5cqw;
   }
 }
 
+.h1-large-style {
+  font-size: 20;
+  font-weight: 600;
+
+  @include media($m-screen-up) {
+    font-size: 14cqw;
+  } 
+}
 
 p {
   margin: 0;
