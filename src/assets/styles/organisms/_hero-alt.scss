@@ -1,4 +1,4 @@
-.hero-project {
+.hero-alt {
   @include wrapper;
   @include verticalPadding;
   position: relative;
@@ -12,7 +12,7 @@
   }
 }
 
-.hero-project__container {
+.hero-alt__container {
   @include grid;
   @include rowGap;
   container-type: inline-size;
@@ -33,11 +33,11 @@
   }
 }
 
-.hero-project__heading {
+.hero-alt__heading {
   @extend .h1-small-style;
 }
 
-.hero-project__sub-header {
+.hero-alt__sub-header {
   grid-row: 3;
   grid-column: 1 / span 12;
   padding-top: calc(#{$gtr} * 2);
@@ -47,7 +47,7 @@
   }
 }
 
-.hero-project__cta {
+.hero-alt__cta {
   grid-row: 3;
   grid-column: 1 / span 12;
   padding-bottom: calc(#{$gtr} * 2);
@@ -57,7 +57,7 @@
   }
 }
 
-.hero-project__scroll {
+.hero-alt__scroll {
   @include media($l-screen-up) {
     padding-bottom: $gtr;
   }
