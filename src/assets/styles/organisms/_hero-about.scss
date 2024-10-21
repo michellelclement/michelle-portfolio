@@ -19,7 +19,7 @@
   padding-bottom: calc(#{$gtr} * 3);
 
   @include media($s-screen-up) {
-    padding-top: calc(#{$gtr} * 3);
+    padding-top: 0;
     padding-bottom: 0;
   }
 
@@ -32,7 +32,7 @@
   }
 
   @include media($xxl-screen-up) {
-    padding-top: $gtr;
+    padding-top: 0;
   }
 }
 
@@ -57,7 +57,7 @@
     padding-bottom: 0;
     padding-top: 0;
     grid-row: 2;
-    margin-top: rem(-50);
+    margin-top: rem(-60);
   }
 }
 
@@ -68,6 +68,15 @@
   
   @include media($m-screen-up) {
     grid-column: 9 / span 4;
+    
+  }
+
+  @include media($l-screen-up) {
+    margin-top: rem(-60);
+  }
+
+  p {
+    padding-bottom: $gtr-s;
   }
 }
 
