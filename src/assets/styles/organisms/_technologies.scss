@@ -5,10 +5,10 @@
 .technologies__container {
   
   @include grid;
-  @include rowGap($gutter);
+  @include rowGap($gtr);
   @include media($m-screen-up) {
     @include verticalPadding;
-    @include rowGap(calc(#{$gutter} * 3));
+    @include rowGap(calc(#{$gtr} * 3));
   }
 }
 

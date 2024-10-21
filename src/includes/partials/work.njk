@@ -2,20 +2,7 @@
   <div class="work__container">
 
     {%- for project in collections.project -%}
-    <div class="work__item js-animate-in">
-      <a href="{{ project.url }}" class="work__image">
-        <div class="work__image--container">
-          <img src="/assets/images/{{ project.data.projectPreviewImg }}" alt="">
-          <div class="button work__button">
-            <span>
-              Launch project<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.333 22.667 22.667 9.333M9.333 9.333h13.334v13.334"/></svg>
-            </span>
-          </div>
-        </div>
-      </a>
-      <p class="work__title js-animate-in">{{ project.data.projectTitle }}</p>
-      <p class="work__descrip js-animate-in">{{ project.data.projectSubtitle }}</p>
-    </div>
+      {% include "partials/card.njk" %}
     {%- endfor -%}
 
   </div>

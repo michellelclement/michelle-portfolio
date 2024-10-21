@@ -3,11 +3,11 @@
   grid-template-columns: repeat($number, 1fr);
 }
 
-@mixin rowGap($val: $gutter) {
+@mixin rowGap($val: $gtr) {
   grid-row-gap: $val;
 }
 
-@mixin colGap($val: $gutter) {
+@mixin colGap($val: $gtr) {
   grid-column-gap: $val;
 }
 

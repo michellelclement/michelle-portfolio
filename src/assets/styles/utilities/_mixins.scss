@@ -1,11 +1,11 @@
-@mixin wrapper($verticalPadding: $gutter) {
+@mixin wrapper($verticalPadding: $gtr) {
   position: relative;
   max-width: $max-width;
   margin: 0 auto;
-  padding: $gutter;
+  padding: $gtr;
 
   @include media($m-screen-up) {
-    padding: calc(#{$gutter} * 2);
+    padding: calc(#{$gtr} * 2);
   }
 
   @include media($l-screen-up) {
@@ -15,11 +15,11 @@
 }
 
 @mixin verticalPadding {
-  padding-top: calc(#{$gutter} * 3);
-  padding-bottom: calc(#{$gutter} * 3);
+  padding-top: calc(#{$gtr} * 3);
+  padding-bottom: calc(#{$gtr} * 3);
   @include media($m-screen-up) {
-    padding-top: calc(#{$gutter} * 5);
-    padding-bottom: calc(#{$gutter} * 5);
+    padding-top: calc(#{$gtr} * 5);
+    padding-bottom: calc(#{$gtr} * 5);
   }
 }
 

@@ -1,11 +1,11 @@
 .cta {
   background-color: $dark;
   color: $light;
-  padding: calc(#{$gutter} * 4) $gutter;
+  padding: calc(#{$gtr} * 4) $gtr;
   cursor: pointer;
 
   @include media($m-screen-up) {
-    padding: calc(#{$gutter} * 6) 0;
+    padding: calc(#{$gtr} * 6) 0;
   }
 
   &:hover {

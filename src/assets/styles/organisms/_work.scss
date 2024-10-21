@@ -4,54 +4,10 @@
 
 .work__container {
   @include grid;
-  @include rowGap(calc($gutter * 3));
+  @include rowGap(calc($gtr * 3));
   @include media($m-screen-up) {
-    @include colGap(calc($gutter * 3));
-    @include rowGap(calc($gutter * 2));
+    @include colGap(calc($gtr * 3));
+    @include rowGap(calc($gtr * 2));
     grid-column: 2 / span 5;
   }
-}
-
-.work__item a {
-  &::after {
-    content: none;
-  }
-}
-
-.work__item:nth-child(odd) {
-  grid-column: 1 / span 12;
-  @include media($m-screen-up) {
-    grid-column: 2 / span 5;
-  }
-}
-
-.work__item:nth-child(even) {
-  grid-column: 1 / span 11;
-  @include media($m-screen-up) {
-    grid-column: 7 / span 5;
-  }
-}
-
-.work__image {
-  position: relative;
-}
-
-.work__image--container img {
-  width: 100%;
-}
-
-.work__button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.work__title,
-.work__descrip {
-  padding-top: $gutter;
-}
-
-.work__descrip {
-  @extend .p-small;
 }

@@ -5,7 +5,7 @@
 .cv__container {
   @include verticalPadding;
   @include grid;
-  @include rowGap(calc(#{$gutter} * 2));
+  @include rowGap(calc(#{$gtr} * 2));
 }
 
 .cv__header {
@@ -23,5 +23,5 @@
 }
 
 .cv__dates {
-  padding: $gutter 0 calc(#{$gutter} * 2) 0;
+  padding: $gtr 0 calc(#{$gtr} * 2) 0;
 }

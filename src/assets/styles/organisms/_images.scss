@@ -1,7 +1,7 @@
 .images {
-  padding-bottom: calc(#{$gutter} * 3);
+  padding-bottom: calc(#{$gtr} * 3);
   @include media($m-screen-up) {
-    padding-bottom: calc(#{$gutter} * 5);
+    padding-bottom: calc(#{$gtr} * 5);
   }
 }
 
@@ -9,7 +9,7 @@
   display: flex;
   overflow-x: hidden;
   flex-direction: row;
-  gap: calc($gutter * 3);
+  gap: calc($gtr * 3);
   padding-bottom: rem(13);
   @include media($m-screen-up) {
     padding-bottom: rem(40);
