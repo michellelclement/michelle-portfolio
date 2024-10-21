@@ -9,16 +9,16 @@ h1 {
   font-weight: 600;
 
   @include media($m-screen-up) {
-    font-size: 5cqw;
+    font-size: 14cqw;
   }
 }
 
-.h1-large-style {
+.h1-small-style {
   font-size: 20;
   font-weight: 600;
 
   @include media($m-screen-up) {
-    font-size: 14cqw;
+    font-size: 5cqw;
   } 
 }
 

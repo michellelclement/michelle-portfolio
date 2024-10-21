@@ -8,10 +8,6 @@
   @include media($m-screen-up) {
     height: 80vh;
   }
-
-  &--project {
-    @include verticalPadding;
-  }
 }
 
 .hero__container {
@@ -20,6 +16,7 @@
   container-type: inline-size;
   padding-top: calc(#{$gtr} * 3);
   padding-bottom: calc(#{$gtr} * 3);
+
   @include media($s-screen-up) {
     padding-top: calc(#{$gtr} * 3);
     padding-bottom: calc(#{$gtr} * 3);
@@ -32,31 +29,12 @@
   @include media($xxl-screen-up) {
     padding-top: $gtr;
   }
-
-  h1 {
-    @extend .h1-large-style;
-  }
-
-  &--project{
-    padding-top: 0;
-  }
 }
 
 .hero__header-1 {
   grid-column: 1 / span 12;
   @include media($m-screen-up) {
     grid-column: 2 / span 12;
-  }
-
-  &--about {
-
-    @include media($m-screen-up) {
-      grid-column: 2 / span 2;
-    }
-  }
-
-  &--project {
-    min-height: rem(300);
   }
 }
 
@@ -77,22 +55,6 @@
   }
 }
 
-.hero__image {
-  &--about {
-    display: flex;
-    justify-content: center;
-    padding-top: calc(#{$gtr} * 2);
-    padding-bottom: calc(#{$gtr} * 2);
-    @include media($m-screen-up) {
-      display: block;
-      grid-column: 5 / span 3;
-      padding-bottom: 0;
-      padding-top: 0;
-      grid-row: 2;
-      margin-top: rem(-50);
-    }
-  }
-}
 
 .hero__sub-header {
   grid-row: 3;
@@ -101,41 +63,14 @@
   @include media($m-screen-up) {
     grid-column: 7 / span 5;
   }
-
-  &--project {
-    @include media($m-screen-down) {
-      padding-top: calc(#{$gtr} * 2);
-      padding-bottom: calc(#{$gtr} / 2);
-    }
-  }
-  &--about {
-    @include media($m-screen-down) {
-      padding-bottom: calc(#{$gtr} / 2);
-    }
-    @include media($m-screen-up) {
-      grid-column: 6 / span 3;
-      margin-top: rem(-75);
-    }
-  }
 }
 
 .hero__cta {
-  &--project,
-  &--about {
-    grid-row: 3;
-    grid-column: 1 / span 12;
-    padding-bottom: calc(#{$gtr} * 2);
-    @include media($m-screen-up) {
-      grid-column: 9 / span 4;
-    }
-  }
-}
-
-.hero__button {
-  &--project {
-    @include media($m-screen-up) {
-      margin-top: calc(#{$gtr} / 2);
-    }
+  grid-row: 3;
+  grid-column: 1 / span 12;
+  padding-bottom: calc(#{$gtr} * 2);
+  @include media($m-screen-up) {
+    grid-column: 9 / span 4;
   }
 }
 
