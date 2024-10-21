@@ -1,9 +1,44 @@
-.hero-about__header {
+.hero-about {
+  @include wrapper;
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @include media($m-screen-up) {
-    grid-column: 1 / span 6;
+    height: 80vh;
   }
-  @include media($l-screen-up) {
-    grid-column: 2 / span 3;
+}
+
+.hero-about__container {
+  @include grid;
+  @include rowGap(0);
+  container-type: inline-size;
+  padding-top: 0;
+  padding-bottom: calc(#{$gtr} * 3);
+
+  @include media($s-screen-up) {
+    padding-top: calc(#{$gtr} * 3);
+    padding-bottom: 0;
+  }
+
+  @include media($m-screen-down) {
+    display: block;
+  }
+
+  @include media($m-screen-up) {
+    grid-column: 2 / span 5;
+  }
+
+  @include media($xxl-screen-up) {
+    padding-top: $gtr;
+  }
+}
+
+.hero-about__header {
+  grid-column: 1 / span 12;
+  @include media($m-screen-up) {
+    grid-column: 2 / span 2;
   }
 }
 
@@ -14,25 +49,49 @@
   padding-bottom: calc(#{$gtr} * 2);
   @include media($m-screen-up) {
     display: block;
-    grid-column: 1 / span 5;
+    grid-column: 5 / span 3;
     padding-bottom: 0;
-  }
-  @include media($l-screen-up) {
-    grid-column: 5 / span 4;
+    padding-top: 0;
+    grid-row: 2;
+    margin-top: rem(-50);
   }
 }
 
-.hero-about__sub-heading {
+.hero-about__cta {
+  grid-row: 3;
+  grid-column: 1 / span 12;
+  padding-bottom: calc(#{$gtr} * 2);
   @include media($m-screen-up) {
-    align-self: end;
-    grid-column: 7 / span 5;
-  }
-  @include media($l-screen-up) {
-    align-self: end;
-    grid-column: 9 / span 3;
+    grid-column: 9 / span 4;
   }
 }
 
-.hero-about__scroll {
-  padding-bottom: $gtr;
-}
+// .hero-about__image {
+//   display: flex;
+//   justify-content: center;
+//   padding-top: calc(#{$gtr} * 2);
+//   padding-bottom: calc(#{$gtr} * 2);
+//   @include media($m-screen-up) {
+//     display: block;
+//     grid-column: 1 / span 5;
+//     padding-bottom: 0;
+//   }
+//   @include media($l-screen-up) {
+//     grid-column: 5 / span 4;
+//   }
+// }
+
+// .hero-about__sub-heading {
+//   @include media($m-screen-up) {
+//     align-self: end;
+//     grid-column: 7 / span 5;
+//   }
+//   @include media($l-screen-up) {
+//     align-self: end;
+//     grid-column: 9 / span 3;
+//   }
+// }
+
+// .hero-about__scroll {
+//   padding-bottom: $gtr;
+// }

@@ -33,19 +33,12 @@
     padding-top: $gtr;
   }
 
-  &--project{
-    padding-top: 0;
+  h1 {
+    @extend .h1-large-style;
   }
 
-  &--about {
+  &--project{
     padding-top: 0;
-    @include rowGap(0);
-    @include media($s-screen-up) {
-      padding-bottom: 0;
-    }
-    @include media($m-screen-down) {
-      display: block;
-    }
   }
 }
 
