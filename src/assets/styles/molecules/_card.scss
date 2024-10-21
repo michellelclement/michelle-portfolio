@@ -1,7 +1,6 @@
 .card {
   border: 3px solid black;
   border-radius: 5%;
-  // overflow: hidden;
   transition: all 500ms;
   overflow: hidden;
 
@@ -32,8 +31,9 @@
 }
 
 .card__image {
-  position: relative;
   background-color: black;
+  object-fit: cover;
+  width: 100%;
 }
 
 .card__image--container img {
@@ -48,13 +48,13 @@
 }
 
 .card__copy {
-  padding: $gtr $gtr-s;
+  padding: $gtr;
 }
 
 .card__descrip {
   padding-top: $gtr-xs;
 }
 
-// .card__descrip {
-//   @extend .p-small;
-// }
+.card__descrip {
+  @extend .p-small;
+}
