@@ -18,8 +18,24 @@ h1 {
   font-weight: 600;
 
   @include media($m-screen-up) {
-    font-size: 5cqw;
+    font-size: 8cqw;
   } 
+}
+
+h2 {
+  font-size: 7cqw;
+
+  @include media($m-screen-up) {
+    font-size: 3cqw;
+  }
+}
+
+h3 {
+  font-size: 37px;
+
+  @include media($m-screen-up) {
+    font-size: 48px;
+  }
 }
 
 p {
@@ -28,6 +44,14 @@ p {
   font-size: rem(21);
   line-height: 110%;
   @include media($m-screen-up) {
-    font-size: rem(36);
+    font-size: rem(30);
+  }
+}
+
+.p-small {
+  font-size: rem(18);
+  line-height: 110%;
+  @include media($m-screen-up) {
+    font-size: rem(24);
   }
 }

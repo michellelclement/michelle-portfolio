@@ -58,6 +58,8 @@
 }
 
 .hero-alt__scroll {
+  @extend .p-small;
+  
   @include media($l-screen-up) {
     padding-bottom: $gtr;
   }
