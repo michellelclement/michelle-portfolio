@@ -19,15 +19,7 @@ accordionContent3: [
 ]
 ---
 
-<section class="hero hero--project">
-  <div class="hero__container hero__container--project">
-    <h1 class="hero__header-1 hero__header-1--project js-animate-in">{{ header }}</h1>
-    <div class="hero__cta--project js-animate-in">
-      <p class="hero__sub-header--project js-animate-in">{{ subheader }}</p>
-    </div>
-  </div>
-  <p class="hero__scroll">Scroll for details</p>
-</section>
+{% include "partials/hero-project.njk" %}
 
 <div class="divider"></div>
 {% include "partials/accordion.njk" %}
