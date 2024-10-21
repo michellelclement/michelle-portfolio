@@ -1,7 +1,14 @@
 .card {
   border: 3px solid black;
-  border-radius: 10%;
+  border-radius: 5%;
+  // overflow: hidden;
+  transition: all 500ms;
   overflow: hidden;
+
+  &:hover {
+    border-radius: 10%;
+    
+  }
 }
 
 .card a {
@@ -40,12 +47,12 @@
 }
 
 .card__copy {
-  padding: $gtr-s;
+  padding: $gtr $gtr-s;
 }
-// .card__title,
-// .card__descrip {
-//   padding-top: $gtr;
-// }
+
+.card__descrip {
+  padding-top: $gtr-xs;
+}
 
 .card__descrip {
   @extend .p-small;
