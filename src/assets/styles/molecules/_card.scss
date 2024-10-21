@@ -1,3 +1,60 @@
 .card {
-  border: $border-primary;
+  border: 3px solid black;
+  border-radius: 5%;
+  // overflow: hidden;
+  transition: all 500ms;
+  overflow: hidden;
+
+  &:hover {
+    border-radius: 10%;
+    
+  }
+}
+
+.card a {
+  &::after {
+    content: none;
+  }
+}
+
+.card:nth-child(odd) {
+  grid-column: 1 / span 12;
+  @include media($m-screen-up) {
+    grid-column: 2 / span 5;
+  }
+}
+
+.card:nth-child(even) {
+  grid-column: 1 / span 11;
+  @include media($m-screen-up) {
+    grid-column: 7 / span 5;
+  }
+}
+
+.card__image {
+  position: relative;
+  background-color: black;
+}
+
+.card__image--container img {
+  width: 100%;
+}
+
+.card__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__copy {
+  padding: $gtr $gtr-s;
+}
+
+.card__descrip {
+  padding-top: $gtr-xs;
+}
+
+.card__descrip {
+  @extend .p-small;
 }

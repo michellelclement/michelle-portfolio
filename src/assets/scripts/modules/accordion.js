@@ -1,50 +1,49 @@
 import gsap from 'gsap';
+
 const accordionContent = 'js-accordion-content';
-const accordionButtons = Array.from(document.querySelectorAll('.js-accordion'));
 const activeClass = 'accord-is-active';
 
+// Accordion toggle logic
 function hide(parentEl) {
-  const el = parentEl;
-  el.classList.remove(activeClass);
-  const content = el.querySelector(`.${accordionContent}`);
-  
+  const content = parentEl.querySelector(`.${accordionContent}`);
+  parentEl.classList.remove(activeClass);
   gsap.to(content, {
     height: 0,
     duration: 0.4,
     ease: 'power2.out',
-    immediateRender: false
   });
 }
 
 function show(parentEl) {
-  const el = parentEl;
-  el.classList.add(activeClass);
-  const content = el.querySelector(`.${accordionContent}`);
-  const tl = gsap.timeline();
-
-  tl.set(content, {height: 'auto'})
-  .from(content, {
+  const content = parentEl.querySelector(`.${accordionContent}`);
+  parentEl.classList.add(activeClass);
+  gsap.set(content, { height: 'auto' });
+  gsap.from(content, {
     height: 0,
     duration: 0.4,
     ease: 'power2.out',
-    immediateRender: false
   });
 }
 
-function toggle(e) {
-  const clicked = e.currentTarget;
-  const parentEl = clicked.parentElement;
- 
- if (parentEl.classList.contains(activeClass)) {
-  hide(parentEl);
- } else {
-  show(parentEl);
- }
+function toggleAccordion(e) {
+  const parentEl = e.currentTarget.parentElement;
+  if (parentEl.classList.contains(activeClass)) {
+    hide(parentEl);
+  } else {
+    show(parentEl);
+  }
 }
 
-
-export default function() {
+// This function applies the event listeners, ensuring they are attached only once
+export default function initAccordion() {
+  const accordionButtons = document.querySelectorAll('.js-accordion');
+  
+  // Check if accordionButtons exist in the DOM
+  if (accordionButtons.length === 0) return;
+  
+  // Remove existing event listeners (optional, just to ensure no duplicates)
   accordionButtons.forEach(button => {
-    button.addEventListener('click', toggle);  
-  })
+    button.removeEventListener('click', toggleAccordion);
+    button.addEventListener('click', toggleAccordion);
+  });
 }

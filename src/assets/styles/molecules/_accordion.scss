@@ -1,5 +1,5 @@
 .accordion {
-  padding: calc($gutter *2) 0;
+  padding: calc($gtr *2) 0;
   grid-column: 1 / span 12;
   @include media($m-screen-up) {
     grid-column: 1 / span 8;
@@ -21,7 +21,7 @@
 }
 
 .accordion__item {
-  padding-top: $gutter;
+  padding-top: $gtr;
 }
 
 .accordion__item-content-container {
@@ -35,7 +35,7 @@
 }
 
 .accordion__item-header {
-  padding: $gutter 0;
+  padding: $gtr 0;
 }
 
 .accordion__icon {

@@ -9,8 +9,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: $gutter;
-  padding: calc(#{$gutter} / 3) 0;
+  gap: $gtr;
+  padding: calc(#{$gtr} / 3) 0;
   @include media($m-screen-up) {
     flex-direction: row;
   }
@@ -22,5 +22,5 @@
 }
 
 .footer__right-span {
-  padding: 0 calc(#{$gutter} / 3);
+  padding: 0 calc(#{$gtr} / 3);
 }

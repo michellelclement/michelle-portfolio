@@ -2,9 +2,9 @@
   @include wrapper;
   @include grid;
   @include verticalPadding;
-  @include rowGap(calc(#{$gutter} * 2));
+  @include rowGap(calc(#{$gtr} * 2));
   @include media($m-screen-up) {
-    @include rowGap(calc(#{$gutter} * 3));
+    @include rowGap(calc(#{$gtr} * 3));
   }
 }
 
