@@ -1,0 +1,64 @@
+.hero-project {
+  @include wrapper;
+  @include verticalPadding;
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media($m-screen-up) {
+    height: 80vh;
+  }
+}
+
+.hero-project__container {
+  @include grid;
+  @include rowGap;
+  container-type: inline-size;
+  padding-top: calc(#{$gtr} * 3);
+  padding-bottom: calc(#{$gtr} * 3);
+
+  @include media($s-screen-up) {
+    padding-top: 0;
+    padding-bottom: calc(#{$gtr} * 3);
+  }
+
+  @include media($m-screen-up) {
+    grid-column: 2 / span 5;
+  }
+
+  @include media($xxl-screen-up) {
+    padding-top: $gtr;
+  }
+}
+
+.hero-project__heading {
+  @extend .h1-small-style;
+}
+
+.hero-project__sub-header {
+  grid-row: 3;
+  grid-column: 1 / span 12;
+  padding-top: calc(#{$gtr} * 2);
+
+  @include media($m-screen-up) {
+    grid-column: 7 / span 5;
+  }
+}
+
+.hero-project__cta {
+  grid-row: 3;
+  grid-column: 1 / span 12;
+  padding-bottom: calc(#{$gtr} * 2);
+
+  @include media($m-screen-up) {
+    grid-column: 9 / span 4;
+  }
+}
+
+.hero-project__scroll {
+  @include media($l-screen-up) {
+    padding-bottom: $gtr;
+  }
+}
