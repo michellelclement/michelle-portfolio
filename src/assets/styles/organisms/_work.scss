@@ -5,8 +5,6 @@
 .work__container {
   @include grid;
   @include rowGap(calc($gtr * 3));
-  grid-column: 12;
-
   @include media($m-screen-up) {
     @include colGap(calc($gtr * 3));
     @include rowGap(calc($gtr * 2));
