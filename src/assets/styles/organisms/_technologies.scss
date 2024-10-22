@@ -1,12 +1,19 @@
 .technologies {
   @include wrapper;
+  overflow-y: clip;
+}
+
+.technologies__blob {
+  right: -400px;
+  top: 50%;
+  transform: translateY(-50%)
 }
 
 .technologies__container {
   @include grid;
   @include rowGap($gtr);
   @include media($m-screen-up) {
-    @include verticalPadding;
+    @include verticalPaddingXl;
   }
 }
 
@@ -19,6 +26,7 @@
 }
 
 .technologies__copy {
+  @extend .p-xlarge;
   grid-column: 1 / span 11;
   
   @include media($m-screen-up) {

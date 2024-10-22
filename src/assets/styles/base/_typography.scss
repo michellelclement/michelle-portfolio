@@ -37,6 +37,14 @@ h3 {
   }
 }
 
+h4 {
+  font-size: 17px;
+
+  @include media($m-screen-up) {
+    font-size: 27px;
+  }
+}
+
 p {
   margin: 0;
   line-height: 1.2;
@@ -52,5 +60,13 @@ p {
   line-height: 110%;
   @include media($m-screen-up) {
     font-size: rem(24);
+  }
+}
+
+.p-xlarge {
+  font-size: rem(36);
+  line-height: 110%;
+  @include media($m-screen-up) {
+    font-size: rem(80);
   }
 }

@@ -6,3 +6,27 @@
   background: radial-gradient(circle, $gradient-2 0%, rgba(81,103,240,0) 30%);
   filter: blur(3rem);
 }
+
+.blob {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background: $gradient-2;
+  background: radial-gradient(circle, $gradient-2 0%, rgba(81,103,240,0) 60%);
+  filter: blur(3rem);
+  animation: grow-shrink 5s infinite ease-in-out;
+  transform-origin: center;
+}
+
+
+@keyframes grow-shrink {
+  0% {
+    transform: translate(-50%, -50%) scale(1); /* Keep centered and at original size */
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3); /* Keep centered and grow */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1); /* Back to original size */
+  }
+}
