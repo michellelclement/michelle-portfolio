@@ -23,15 +23,6 @@
   }
 }
 
-// @mixin verticalPaddingXl {
-//   padding-top: calc(#{$gtr} * 3);
-//   padding-bottom: calc(#{$gtr} * 3);
-//   @include media($m-screen-up) {
-//     padding-top: calc(#{$gtr} * 8);
-//     padding-bottom: calc(#{$gtr} * 8);
-//   }
-// }
-
 @mixin listReset {
   margin: 0;
   padding: 0;
