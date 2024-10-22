@@ -87,5 +87,6 @@
 }
 
 .hero-about__scroll {
+  @extend .p-small;
   padding-bottom: $gtr;
 }
