@@ -3,17 +3,17 @@
   overflow-y: clip;
 }
 
-.technologies__blob {
-  right: -400px;
-  top: 50%;
-  transform: translateY(-50%)
-}
+// .technologies__blob {
+//   right: -400px;
+//   // top: 50%;
+//   // transform: translateY(-50%)
+// }
 
 .technologies__container {
   @include grid;
   @include rowGap($gtr);
   @include media($m-screen-up) {
-    @include verticalPaddingXl;
+    @include verticalPadding;
   }
 }
 
