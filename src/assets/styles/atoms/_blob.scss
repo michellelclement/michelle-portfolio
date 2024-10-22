@@ -20,6 +20,14 @@
   z-index: -1;
 }
 
+.blob--work {
+  top: 2000px;
+
+  @include media($m-screen-up) {
+    display: none;
+  }
+}
+
 
 @keyframes grow-shrink {
   0% {
