@@ -1,5 +1,7 @@
 import { gsap } from 'gsap';
 
+// Original code by Dilip Parasu via Codepen https://codepen.io/SuperSecureHuman/pen/NWoVXxp
+
 export default function gradient() {
   const blobContainer = document.getElementById("blob-container");
 
