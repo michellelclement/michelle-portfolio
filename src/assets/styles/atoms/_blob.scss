@@ -28,6 +28,17 @@
   }
 }
 
+.blob--hero {
+  top: 600px;
+  right: -700px;
+  width: 600px;
+  height: 600px;
+
+  @include media($m-screen-up) {
+    display: none;
+  }
+}
+
 
 @keyframes grow-shrink {
   0% {
