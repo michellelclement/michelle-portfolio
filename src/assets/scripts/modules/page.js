@@ -2,8 +2,11 @@ import { gsap } from 'gsap';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import initAccordion from './accordion'; // Import accordion module
+import gradient from './gradient';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+let gradientCleanup = null; // Variable to store the cleanup function
 
 //Page Transition
 function delay(n) {
@@ -65,22 +68,30 @@ barba.init({
         const done = this.async();
         pageTransition();
         await delay(1000);
+
+        // Clean up gradient event listeners on leave
+        if (gradientCleanup) {
+          gradientCleanup();
+        }
         done();
       },
       async enter() {
         // Re-initialize animations for new content
         heroAnimation();
+        gradientCleanup = gradient(); // Reattach gradient with cleanup
         initAccordion(); // Initialize accordion after new page load
       },
       async once() {
         // Initialize animations on the first load
         heroAnimation();
         animateTextInSections();
+        gradientCleanup = gradient(); // Reattach gradient with cleanup
         initAccordion(); // Initialize accordion on first page load
       },
       async after() {
         // Ensure any content animations work after the page transition
         animateTextInSections();
+        gradientCleanup = gradient(); // Reattach gradient with cleanup
       },
     },
   ],
