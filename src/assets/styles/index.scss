@@ -17,14 +17,15 @@
 @import "atoms/skip-link";
 @import "atoms/burger-menu";
 @import "atoms/button";
-@import "atoms/plus";
-@import "atoms/star";
+// @import "atoms/plus";
+// @import "atoms/star";
+@import "atoms/blob";
 
 @import "molecules/card";
 @import "molecules/image-oval";
 @import "molecules/accordion";
 
-
+@import "organisms/content";
 @import "organisms/header";
 @import "organisms/footer";
 @import "organisms/hero";
